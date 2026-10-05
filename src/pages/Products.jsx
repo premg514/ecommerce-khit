@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ProductCard from "../components/ProductCard";
+import { Mosaic, ThreeDot } from "react-loading-indicators";
 
 export default function Products() {
   const [products, setProducts] = useState([]);
@@ -20,7 +21,7 @@ export default function Products() {
             return <ProductCard key={prod.id} prod={prod} />;
           })
         ) : (
-          <li>loading...</li>
+          <Mosaic color="#32cd32" size="medium" text="" textColor="" />
         )}
       </ul>
     </div>
