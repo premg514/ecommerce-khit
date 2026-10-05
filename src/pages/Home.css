@@ -1,0 +1,20 @@
+.home-container {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo4Lcl1h0F2sd5pl8ZpVPoJVwn-R4kc5O9rOE6HNV0Fg&s=10");
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  color: green;
+  font-size: 50px;
+}
+button {
+  background-color: aqua;
+  color: black;
+  height: 28px;
+  width: 128px;
+  border-radius: 25px;
+}
