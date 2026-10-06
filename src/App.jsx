@@ -1,23 +1,23 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Home from './pages/Home'
-import Products from './pages/Products'
+import { useState } from "react";
+import heroImg from "./assets/hero.png";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "./assets/vite.svg";
+import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Products from "./pages/Products";
+import Product from "./pages/Product";
 
 function App() {
-  
-
   return (
-   <BrowserRouter>
-   <Routes>
-    <Route path='/' element={<Home/>} />
-    <Route path='/products' element={<Products/>} />
-   </Routes>
-   </BrowserRouter>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/product/:productId" element={<Product />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
