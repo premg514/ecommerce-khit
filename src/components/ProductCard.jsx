@@ -1,16 +1,18 @@
 import React from "react";
 
 export default function ProductCard({ prod }) {
-  console.log("images", prod.images);
   return (
-    <li>
-      {/* images */}
-      {prod.images.map(function (image) {
-        return <img src={image} />;
-      })}
-      <h1>{prod.brand ? prod.brand : "BRAND"}</h1>
-      <p>{prod.description}</p>
-      <p>{prod.price}</p>
+    <li className="product-card">
+      <img
+        className="product-card-image"
+        src={prod.thumbnail || prod.images[0]}
+        alt={prod.title}
+      />
+      <div className="product-card-body">
+        <h2 className="product-card-brand">{prod.brand ? prod.brand : "BRAND"}</h2>
+        <p className="product-card-desc">{prod.description}</p>
+        <p className="product-card-price">${prod.price}</p>
+      </div>
     </li>
   );
 }
